@@ -1,11 +1,16 @@
 package utopia.guimaker.view
+import java.awt.FontMetrics
+
 import utopia.genesis.color.Color
+import utopia.genesis.shape.shape2D.Point
 import utopia.genesis.util.Drawer
+import utopia.guimaker.controller.Fonts
+import utopia.guimaker.handling.FontUpdateListener
 import utopia.reflection.component.Alignment.Center
 import utopia.reflection.component.stack.CachingStackable
 import utopia.reflection.component.{Alignable, Alignment, TextComponent}
 import utopia.reflection.localization.{LocalizedString, Localizer}
-import utopia.reflection.text.Font
+import utopia.reflection.shape.{StackLength, StackSize}
 
 /**
   * This component simply presents text
@@ -13,81 +18,91 @@ import utopia.reflection.text.Font
   * @since 21.5.2019, v1+
   */
 class TextLabel()(implicit defaultLanguageCode: String, localizer: Localizer) extends Component with Alignable
-	with TextComponent with CachingStackable
+	with FontUpdateListener with TextComponent with CachingStackable
 {
 	// ATTRIBUTES	------------------
 	
+	// TODO: Add setters for font & margins
 	private var _text: LocalizedString = "Label"
 	private var _alignment: Alignment = Center
-	// private var _font: Font = Font.
+	private val fontIndex = 0
+	private var _fontMetrics: Option[FontMetrics] = None
+	private val _hMargin = StackLength.any
+	private val _vMargin = StackLength.any
+	private var _textColor = Color.textBlack
 	
 	
 	// IMPLEMENTED	------------------
 	
-	/**
-	  * Draws the contents inside this component
-	  * @param drawer A drawer with origin at this component's origin and clipped to this component's size
-	  */
-	override protected def drawContent(drawer: Drawer) = ???
+	override protected def drawContent(drawer: Drawer) =
+	{
+		// Updates font metrics if necessary
+		if (_fontMetrics.isEmpty)
+		{
+			_fontMetrics = Some(drawer.graphics.getFontMetrics(font.toAwt))
+			revalidate()
+		}
+		
+		// Calculates text size
+		_fontMetrics.foreach
+		{
+			metrics =>
+				val textWidth = metrics.stringWidth(text.string)
+				val textHeight = metrics.getHeight
+				
+				// Determines text location
+				val textX = alignment match
+				{
+					case Alignment.Left => 0
+					case Alignment.Right => width - textWidth
+					case _ => (width - textWidth) / 2
+				}
+				val textY = alignment.vertical match
+				{
+					case Alignment.Top => 0
+					case Alignment.Bottom => height - textHeight
+					case _ => (height - textHeight) / 2
+				}
+			
+				// Draws the actual text
+				drawer.withEdgeColor(textColor).drawText(_text.string, font.toAwt, Point(textX, textY))
+		}
+	}
 	
-	/**
-	  * Updates the layout (and other contents) of this stackable instance. This method will be called if the component,
-	  * or its child is revalidated. The stack sizes of this component, as well as those of revalidating children
-	  * should be reset at this point.
-	  */
-	override def updateLayout() = ???
+	override def updateLayout() = Unit
 	
-	/**
-	  * This method is called when this component is "picked up"
-	  */
-	override protected def pick() = ???
+	override def fontMetrics = _fontMetrics
 	
-	/**
-	  * @return The font metrics object for this component. None if font hasn't been specified.
-	  */
-	override def fontMetrics = ???
+	override def alignment = _alignment
 	
-	/**
-	  * @return This component's text alignment
-	  */
-	override def alignment = ???
+	override def text = _text
+	def text_=(newText: LocalizedString) =
+	{
+		_text = newText
+		revalidate()
+	}
 	
-	/**
-	  * @return The text currently presented in this component
-	  */
-	override def text = ???
+	override def align(alignment: Alignment) =
+	{
+		_alignment = alignment
+		revalidate()
+	}
 	
-	/**
-	  * Aligns the contents of this component
-	  * @param alignment The target alignment
-	  */
-	override def align(alignment: Alignment) = ???
+	override def margins = StackSize(_hMargin, _vMargin)
 	
-	/**
-	  * @return The margins around the text in this component
-	  */
-	override def margins = ???
+	override def hMargin = _hMargin
 	
-	/**
-	  * @return The font used in this component
-	  */
-	override def font = ???
+	override def vMargin = _vMargin
 	
-	/**
-	  * @return Whether this component has a minimum width based on text size. If false, text may not always show.
-	  */
-	override def hasMinWidth = ???
+	override def font = Fonts(fontIndex)
 	
-	/**
-	  * @return The color of the text in this component
-	  */
-	override def textColor = ???
+	override def hasMinWidth = true
 	
-	override def textColor_=(newColor: Color) = ???
+	override def textColor = _textColor
+	override def textColor_=(newColor: Color) = _textColor = newColor
 	
-	/**
-	  * Within this method the stackable instance should perform the actual visibility change
-	  * @param visible Whether this stackable should become visible (true) or invisible (false)
-	  */
-	override protected def updateVisibility(visible: Boolean) = ???
+	override protected def updateVisibility(visible: Boolean) = super[Component].isVisible_=(visible)
+	
+	// Resets the font metrics on font change (this will revalidate this component on draw)
+	override def onFontsUpdated() = _fontMetrics = None
 }

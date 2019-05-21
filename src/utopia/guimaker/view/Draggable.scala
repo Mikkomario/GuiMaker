@@ -39,11 +39,6 @@ trait Draggable extends ComponentLike
 	  */
 	protected def drop(mousePosition: Point): Unit
 	
-	/**
-	  * This method is called when this component is "picked up"
-	  */
-	protected def pick(): Unit
-	
 	
 	// COMPUTED	-----------------
 	
@@ -101,10 +96,7 @@ trait Draggable extends ComponentLike
 						if (isAttached)
 							isDetaching = true
 						else
-						{
 							_isDragging = true
-							pick()
-						}
 					}
 				}
 				// Case: Drag ends
@@ -135,7 +127,6 @@ trait Draggable extends ComponentLike
 				detach()
 				isDetaching = false
 				_isDragging = true
-				pick()
 				position = event.mousePosition - relativeDragPosition
 			}
 		}

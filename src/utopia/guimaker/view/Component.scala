@@ -7,6 +7,7 @@ import utopia.genesis.shape.shape2D.{Bounds, Point, Size, Transformation}
 import utopia.genesis.util.Drawer
 import utopia.guimaker.controller.ComponentHierarchy
 import utopia.inception.handling.HandlerType
+import utopia.inception.handling.mutable.Killable
 import utopia.reflection.component.stack.Stackable
 import utopia.reflection.event.{ResizeEvent, ResizeListener}
 
@@ -16,20 +17,20 @@ import utopia.reflection.event.{ResizeEvent, ResizeListener}
   * @author Mikko Hilpinen
   * @since 20.5.2019, v1+
   */
-trait Component extends Draggable with Stackable with Drawable
+trait Component extends Draggable with Stackable with Drawable with Killable
 {
 	// ATTRIBUTES	--------------------
 	
 	private var _parent: Option[Container] = None
 	private var _isTransParent = true
 	private var _size = Size.zero
+	private var _isVisible = true
 	
 	var borderWidth = 1
 	var borderColor: Option[Color] = None
 	
 	override var background: Color = Color.white
 	override var resizeListeners = Vector[ResizeListener]()
-	override var isVisible = true
 	
 	override val mouseButtonHandler = MouseButtonStateHandler()
 	override val mouseMoveHandler = MouseMoveHandler()
@@ -58,6 +59,9 @@ trait Component extends Draggable with Stackable with Drawable
 	
 	
 	// IMPLEMENTED	--------------------
+	
+	override def isVisible = _isVisible
+	override def isVisible_=(isVisible: Boolean) = _isVisible = isVisible
 	
 	override def size = _size
 	override def size_=(newSize: Size) =
