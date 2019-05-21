@@ -35,8 +35,9 @@ trait Draggable extends ComponentLike
 	
 	/**
 	  * This method is called when this component is dropped to a new location
+	  * @param mousePosition The mouse cursor position at the time of drop
 	  */
-	protected def drop(): Unit
+	protected def drop(mousePosition: Point): Unit
 	
 	/**
 	  * This method is called when this component is "picked up"
@@ -55,6 +56,19 @@ trait Draggable extends ComponentLike
 	  * @return Whether this component is free-roaming (not attached)
 	  */
 	def isFree = !isAttached
+	
+	
+	// OTHER	-----------------
+	
+	/**
+	  * Starts mouse listening within this component
+	  */
+	protected def setupMouseDrag() =
+	{
+		val listener = new MouseListener()
+		addMouseButtonListener(listener)
+		addMouseMoveListener(listener)
+	}
 	
 	
 	// NESTED CLASSES	---------
@@ -98,7 +112,7 @@ trait Draggable extends ComponentLike
 				{
 					// Drops the component
 					_isDragging = false
-					drop()
+					drop(event.mousePosition)
 				}
 				// Case: Detaching ends
 				else if (isDetaching)
