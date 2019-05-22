@@ -52,13 +52,18 @@ trait Component extends Draggable with Stackable with Drawable with Killable
 	
 	// COMPUTED	------------------------
 	
+	/**
+	  * @return The 'absolute' position of this component (as in the position in the overall canvas)
+	  */
+	def absolutePosition: Point = parent.map { _.absolutePosition + position } getOrElse position
+	
+	
+	// IMPLEMENTED	--------------------
+	
 	override def parent = _parent
 	
 	override def isTransparent = _isTransParent
 	def isTransparent_=(transparency: Boolean) = _isTransParent = transparency
-	
-	
-	// IMPLEMENTED	--------------------
 	
 	override def isVisible = _isVisible
 	override def isVisible_=(isVisible: Boolean) = _isVisible = isVisible
@@ -105,7 +110,8 @@ trait Component extends Draggable with Stackable with Drawable with Killable
 		{
 			// Uses a transformed & clipped version of drawer
 			val myArea = Bounds(Point.origin, size)
-			val transformedDrawer = drawer.transformed(Transformation.translation(position.toVector)).clippedTo(myArea)
+			val transformedDrawer = drawer.transformed(Transformation.translation(absolutePosition.toVector)).clippedTo(
+				Bounds(Point.origin, size + (1, 1)))
 			// When dragging, this component is drawn as partly opaque
 			(if (isDragging) transformedDrawer.withAlpha(0.55) else transformedDrawer).disposeAfter
 			{

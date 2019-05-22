@@ -2,7 +2,7 @@ package utopia.guimaker.view
 import java.awt.FontMetrics
 
 import utopia.genesis.color.Color
-import utopia.genesis.shape.shape2D.Point
+import utopia.genesis.shape.shape2D.{Point, Size}
 import utopia.genesis.util.Drawer
 import utopia.guimaker.controller.Fonts
 import utopia.guimaker.handling.FontUpdateListener
@@ -30,6 +30,12 @@ class TextLabel()(implicit defaultLanguageCode: String, localizer: Localizer) ex
 	private val _hMargin = StackLength.any
 	private val _vMargin = StackLength.any
 	private var _textColor = Color.textBlack
+	
+	
+	// INITIAL CODE	------------------
+	
+	size = Size(128, 32)
+	setupMouseDrag()
 	
 	
 	// IMPLEMENTED	------------------
@@ -69,7 +75,11 @@ class TextLabel()(implicit defaultLanguageCode: String, localizer: Localizer) ex
 		}
 	}
 	
-	override def updateLayout() = Unit
+	override def updateLayout() =
+	{
+		println("Updating text label layout")
+		if (isFree) setToOptimalSize()
+	}
 	
 	override def fontMetrics = _fontMetrics
 	
