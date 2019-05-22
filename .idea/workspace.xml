@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ee431ec-582e-4b04-ac3e-5494f6692518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utopia/guimaker/controller/EventDistributor.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="4ee431ec-582e-4b04-ac3e-5494f6692518" name="Default Changelist" comment="Added ActionQueue to Flow. Also debugged ThreadPool">
+      <change afterPath="$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/ActionQueue.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Utopia-Flow-Scala/test/utopia/flow/test/ActionQueueTest.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utopia/guimaker/controller/ComponentHierarchy.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/utopia/guimaker/controller/ComponentHierarchy.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utopia/guimaker/main/GuiMaker.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/utopia/guimaker/main/GuiMaker.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utopia/guimaker/view/Component.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/utopia/guimaker/view/Component.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utopia/guimaker/view/TextLabel.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/utopia/guimaker/view/TextLabel.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Utopia-Flow-Scala/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Flow-Scala/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/datastructure/template/TreeLike.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/datastructure/template/TreeLike.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/event/Consumable.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/event/Consumable.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/event/MouseButtonStateEvent.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/event/MouseButtonStateEvent.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/event/MouseWheelEvent.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/event/MouseWheelEvent.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/handling/ConsumableEventHandler.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/handling/ConsumableEventHandler.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/component/ComponentLike.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/component/ComponentLike.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/StackHierarchyManager.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/StackHierarchyManager.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Utopia-Reflection/test/utopia/reflection/test/ScrollCanvasTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Reflection/test/utopia/reflection/test/ScrollCanvasTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/AsyncExtensions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/AsyncExtensions.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/ThreadPool.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/ThreadPool.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="../Utopia-Genesis-Scala/out/" />
@@ -34,52 +24,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utopia/guimaker/view/Component.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/StackHierarchyManager.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="213" column="5" lean-forward="true" selection-start-line="213" selection-start-column="5" selection-end-line="213" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utopia/guimaker/view/TextLabel.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
-              <folding>
-                <element signature="e#29#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utopia/guimaker/view/Draggable.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1404">
-              <caret line="117" column="71" lean-forward="true" selection-start-line="117" selection-start-column="71" selection-end-line="117" selection-end-column="71" />
-              <folding>
-                <element signature="e#30#66#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/utopia/guimaker/main/GuiMaker.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+            <state relative-caret-position="340">
+              <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
               <folding>
                 <element signature="e#30#79#0" expanded="true" />
               </folding>
@@ -88,13 +36,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utopia/guimaker/controller/ComponentHierarchy.scala">
+        <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/ActionQueue.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1150">
-              <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+            <state relative-caret-position="336">
+              <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
               <folding>
-                <element signature="e#36#82#0" expanded="true" />
+                <element signature="e#27#69#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/README.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="620">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/ThreadPool.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -104,10 +70,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>StackHierarchy</find>
+      <find>println</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Utopia-Flow-Scala" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -126,7 +93,6 @@
         <option value="$PROJECT_DIR$/src/utopia/guimaker/view/Draggable.scala" />
         <option value="$PROJECT_DIR$/src/utopia/guimaker/view/TextLabel.scala" />
         <option value="$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/datastructure/template/TreeLike.scala" />
-        <option value="$PROJECT_DIR$/../Utopia-Flow-Scala/README.txt" />
         <option value="$PROJECT_DIR$/src/utopia/guimaker/view/Component.scala" />
         <option value="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/event/MouseButtonStateEvent.scala" />
         <option value="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/event/MouseWheelEvent.scala" />
@@ -138,14 +104,18 @@
         <option value="$PROJECT_DIR$/src/utopia/guimaker/main/GuiMaker.scala" />
         <option value="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/StackHierarchyManager.scala" />
         <option value="$PROJECT_DIR$/src/utopia/guimaker/controller/ComponentHierarchy.scala" />
+        <option value="$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/ActionQueue.scala" />
+        <option value="$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/AsyncExtensions.scala" />
+        <option value="$PROJECT_DIR$/../Utopia-Flow-Scala/test/utopia/flow/test/ActionQueueTest.scala" />
+        <option value="$PROJECT_DIR$/../Utopia-Flow-Scala/README.txt" />
+        <option value="$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/ThreadPool.scala" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="72" />
-    <option name="y" value="-33" />
-    <option name="width" value="2478" />
-    <option name="height" value="2112" />
+    <option name="x" value="-11" />
+    <option name="width" value="2576" />
+    <option name="height" value="2111" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -160,42 +130,6 @@
           <expand>
             <path>
               <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuiMaker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuiMaker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuiMaker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="guimaker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuiMaker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="guimaker" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuiMaker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="guimaker" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GuiMaker" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="guimaker" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
               <item name="Utopia-Flow-Scala" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -208,6 +142,13 @@
               <item name="Utopia-Flow-Scala" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="flow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Utopia-Flow-Scala" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="flow" type="462c0819:PsiDirectoryNode" />
+              <item name="async" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
@@ -219,87 +160,12 @@
             <path>
               <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
               <item name="Utopia-Flow-Scala" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="flow" type="462c0819:PsiDirectoryNode" />
-              <item name="datastructure" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Genesis-Scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Genesis-Scala" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Genesis-Scala" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="genesis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Genesis-Scala" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="genesis" type="462c0819:PsiDirectoryNode" />
-              <item name="event" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Genesis-Scala" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="genesis" type="462c0819:PsiDirectoryNode" />
-              <item name="handling" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Genesis-Scala" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="genesis" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Reflection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Reflection" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Reflection" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reflection" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Reflection" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reflection" type="462c0819:PsiDirectoryNode" />
-              <item name="component" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Reflection" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reflection" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Reflection" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reflection" type="462c0819:PsiDirectoryNode" />
-              <item name="container" type="462c0819:PsiDirectoryNode" />
-              <item name="stack" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Reflection" type="462c0819:PsiDirectoryNode" />
+              <item name="Utopia-Flow-Scala" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -335,7 +201,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GuiMaker">
+  <component name="RunManager" selected="Application.ActionQueueTest">
+    <configuration name="ActionQueueTest" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="utopia.flow.test.ActionQueueTest" />
+      <module name="Utopia-Flow-Scala" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="utopia.flow.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GuiMaker" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="utopia.guimaker.main.GuiMaker" />
       <module name="GuiMaker" />
@@ -377,6 +256,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ActionQueueTest" />
         <item itemvalue="Application.GuiMaker" />
         <item itemvalue="Application.MouseTest" />
         <item itemvalue="Application.ScrollCanvasTest" />
@@ -412,14 +292,21 @@
       <option name="project" value="LOCAL" />
       <updated>1558473600340</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Flow: Utility methods added to TreeLike&#10;Genesis: Consumable handling refactored&#10;Reflection: StackHierarchyManagement updated to support individual elements&#10;GuiMaker: Tested and debugged TextLabel inside ScrollCanvas">
+      <created>1558515940202</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1558515940202</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25466827" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25466827" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -429,7 +316,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19158879" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.24844237" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -452,7 +339,8 @@
     <MESSAGE value="Flow: Added more methods to TreeLike (template &amp; immutable)&#10;GuiMaker: Working on basic component classes" />
     <MESSAGE value="Working on GuiMaker component classes" />
     <MESSAGE value="Genesis: Added new string draw function to drawer&#10;GuiMaker: Added TextLabel component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Genesis: Added new string draw function to drawer&#10;GuiMaker: Added TextLabel component" />
+    <MESSAGE value="Flow: Utility methods added to TreeLike&#10;Genesis: Consumable handling refactored&#10;Reflection: StackHierarchyManagement updated to support individual elements&#10;GuiMaker: Tested and debugged TextLabel inside ScrollCanvas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flow: Utility methods added to TreeLike&#10;Genesis: Consumable handling refactored&#10;Reflection: StackHierarchyManagement updated to support individual elements&#10;GuiMaker: Tested and debugged TextLabel inside ScrollCanvas" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/README.txt">
@@ -593,13 +481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Utopia-Inception-Scala/src/utopia/inception/handling/Handler.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
@@ -719,11 +600,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utopia/guimaker/main/GuiMaker.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="27" column="27" lean-forward="true" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+        <state relative-caret-position="340">
+          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding>
             <element signature="e#30#79#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/test/utopia/flow/test/AsyncTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/AsyncExtensions.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="e#27#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/test/utopia/flow/test/ActionQueueTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding>
+            <element signature="e#26#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/ActionQueue.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+          <folding>
+            <element signature="e#27#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/ThreadPool.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
         </state>
       </provider>
     </entry>
