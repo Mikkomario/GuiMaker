@@ -95,7 +95,7 @@ trait Component extends Draggable with Stackable with Drawable with Killable
 		{
 			case Some(container: Container) =>
 				_parent = Some(container)
-				container += this
+				container += (this, mousePosition - container.position)
 				ComponentHierarchy.registerConnection(container, this)
 			case _ => Unit
 		}
