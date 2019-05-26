@@ -1,5 +1,6 @@
 package utopia.guimaker.model
 
+import utopia.flow.util.CollectionExtensions._
 import utopia.reflection.shape.StackLength
 
 object LengthType
@@ -48,4 +49,19 @@ sealed trait LengthType
 	  * @return A stack length of this type
 	  */
 	def apply(primary: Int, secondary: Option[Int], tertiary: Option[Int]): StackLength
+	
+	/**
+	  * Creates a new stack length
+	  * @param primary The primary length value
+	  * @param more Additional length values
+	  * @return A stack length of this type
+	  */
+	def apply(primary: Int, more: Int*): StackLength = apply(primary, more.headOption, more.getOption(1))
+	
+	/**
+	  * Creates a new stack length
+	  * @param lengths The lengths that form this length. Must contain at least one value.
+	  * @return A stack length of this type
+	  */
+	def apply(lengths: Seq[Int]): StackLength = apply(lengths.head, lengths.getOption(1), lengths.getOption(2))
 }
