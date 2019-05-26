@@ -2,6 +2,7 @@ package utopia.guimaker.model
 
 object MarginRole
 {
+	case object NoMargin extends MarginRole { def name = "None" }
 	case object Normal extends MarginRole { def name = "Normal" }
 	case object VerySmall extends MarginRole { def name = "Very Small" }
 	case object Small extends MarginRole { def name = "Small" }

@@ -1,6 +1,7 @@
 package utopia.guimaker.controller
 
-import utopia.flow.datastructure.mutable.PointerWithEvents
+import utopia.guimaker.handling.MarginUpdateListener
+import utopia.guimaker.handling.mutable.MarginUpdateHandler
 import utopia.guimaker.model.MarginRole
 import utopia.guimaker.model.MarginRole._
 
@@ -15,13 +16,17 @@ object Margins
 {
 	// ATTRIBUTES	-----------------
 	
-	// TODO: Make this mutable and add events for changes
-	private val margins = HashMap[MarginRole, Int](Normal -> 16, VerySmall -> 4, Small -> 8, Large -> 24, VeryLarge -> 32).map {
-		p => p._1 -> new PointerWithEvents(p._2) }
+	private val listenerHandler = MarginUpdateHandler()
+	private var margins = HashMap[MarginRole, Int](NoMargin -> 0, Normal -> 16, VerySmall -> 4, Small -> 8,
+		Large -> 24, VeryLarge -> 32)
 	
 	
 	// COMPUTED	---------------------
 	
+	/**
+	  * @return A 0 margin length
+	  */
+	def none = margins(NoMargin)
 	/**
 	  * @return The default margin used in most situations
 	  */
@@ -51,4 +56,24 @@ object Margins
 	  * @return Margin for the role
 	  */
 	def apply(role: MarginRole) = margins.getOrElse(role, normal)
+	
+	/**
+	  * Updates a single margin
+	  * @param role The margin's role
+	  * @param length The new length for the margin
+	  */
+	def update(role: MarginRole, length: Int) =
+	{
+		margins += (role -> length)
+		listenerHandler.onMarginsUpdated()
+	}
+	
+	
+	// OTHER	--------------------
+	
+	/**
+	  * Adds a new listener to be informed of margin changes
+	  * @param listener A listener
+	  */
+	def addListener(listener: MarginUpdateListener) = listenerHandler += listener
 }

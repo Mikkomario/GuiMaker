@@ -9,7 +9,7 @@ import utopia.genesis.handling.mutable.{ActorHandler, DrawableHandler, MouseButt
 import utopia.genesis.shape.shape2D.{Point, Size}
 import utopia.genesis.util.FPS
 import utopia.guimaker.controller.{ComponentHierarchy, EventDistributor, Fonts}
-import utopia.guimaker.view.TextLabel
+import utopia.guimaker.view.{Stack, TextLabel}
 import utopia.inception.handling.mutable.HandlerRelay
 import utopia.reflection.component.swing.ScrollCanvas
 import utopia.reflection.container.stack.{BoxScrollBarDrawer, StackHierarchyManager}
@@ -49,7 +49,10 @@ object GuiMaker extends App
 	testLabel.position = Point(32, 32)
 	ComponentHierarchy.registerFree(testLabel)
 	
-	handlers += testLabel
+	val stack = new Stack()
+	stack.position = worldSize.toPoint / 2
+	
+	handlers ++= (testLabel, stack)
 	
 	// Creates the canvas
 	val canvas = new ScrollCanvas(worldSize, drawHandler, actorHandler, mouseButtonHandler, mouseMoveHandler,
@@ -73,4 +76,6 @@ object GuiMaker extends App
 	frame.startEventGenerators(actorHandler)
 	canvas.startDrawing(FPS(30))
 	frame.isVisible = true
+	
+	println(stack.bounds)
 }

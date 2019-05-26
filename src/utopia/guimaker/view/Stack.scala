@@ -1,10 +1,13 @@
 package utopia.guimaker.view
 
+import utopia.genesis.color.Color
+import utopia.reflection.shape.LengthExtensions._
 import utopia.genesis.shape.Axis._
 import utopia.genesis.shape.Axis2D
-import utopia.genesis.shape.shape2D.Point
+import utopia.genesis.shape.shape2D.{Bounds, Point}
 import utopia.genesis.util.Drawer
-import utopia.guimaker.controller.Margins
+import utopia.guimaker.model.Margin
+import utopia.guimaker.model.MarginRole.{NoMargin, Normal}
 import utopia.reflection.component.stack.CachingStackable
 import utopia.reflection.container.stack.StackLayout.Fit
 import utopia.reflection.container.stack.{StackLayout, StackLike}
@@ -20,7 +23,14 @@ class Stack extends Component with StackLike[Component] with CachingStackable wi
 	
 	private var _direction: Axis2D = Y
 	private var _layout: StackLayout = Fit
-	private var _marginId = 0
+	private var _margin = Margin.any(Normal)
+	private var _cap = Margin.fixed(NoMargin)
+	
+	
+	// INITIAL CODE	--------------------
+	
+	setToOptimalSize()
+	setupMouseDrag()
 	
 	
 	// IMPLEMENTED	--------------------
@@ -42,52 +52,54 @@ class Stack extends Component with StackLike[Component] with CachingStackable wi
 		revalidate()
 	}
 	
-	override def margin = ??? //Margins(_marginId)
+	override def margin = _margin.length
+	def margin_=(margin: Margin) =
+	{
+		_margin = margin
+		revalidate()
+	}
 	
-	/**
-	  * @return The cap at each end of this stack
-	  */
-	override def cap = ???
+	override def cap = _cap.length
+	def cap_=(newCap: Margin) =
+	{
+		_cap = newCap
+		revalidate()
+	}
 	
-	// Doesn't have any special content to draw
-	override protected def drawContent(drawer: Drawer) = Unit
+	override def fontMetrics = None
+	override def isFull = false
 	
-	/**
-	  * Within this method the stackable instance should perform the actual visibility change
-	  * @param visible Whether this stackable should become visible (true) or invisible (false)
-	  */
-	override protected def updateVisibility(visible: Boolean) = ???
+	// Draws a slight border
+	override protected def drawContent(drawer: Drawer) =
+	{
+		drawer.withColor(None, Some(Color.black.toAwt)).withAlpha(0.25).draw(Bounds(Point.origin, size))
+	}
 	
-	/**
-	  * Adds a new item to this container
-	  */
-	override protected def add(component: Component) = ???
+	override protected def updateVisibility(visible: Boolean) = super[Component].isVisible_=(visible)
 	
-	/**
-	  * Removes an item from this container
-	  */
-	override protected def remove(component: Component) = ???
+	// TODO: Consider moving component hierarchy & parent changes here. Until then, this is empty
+	override protected def add(component: Component) = println(s"Adding $component to stack")
+	override protected def remove(component: Component) = println(s"Removing $component from stack")
 	
-	/**
-	  * @return The font metrics object for this component. None if font hasn't been specified.
-	  */
-	override def fontMetrics = ???
+	override def add(component: Component, position: Point) =
+	{
+		if (isEmpty)
+			+=(component)
+		else
+		{
+			// Calculates the new index for the component
+			val projection = position.projectedOver(direction).length
+			val largerIndex = components.indexWhere { _.position.projectedOver(direction).length >= projection }
+			
+			if (largerIndex < 0)
+				+=(component)
+			else
+				insert(component, largerIndex)
+		}
+	}
 	
-	/**
-	  * @return Whether this container is already full of items
-	  */
-	override def isFull = ???
-	
-	/**
-	  * Adds a new item to this container
-	  * @param component The component to add
-	  * @param position  The relative position of the component / cursor at the time of add
-	  */
-	override def add(component: Component, position: Point) = ???
-	
-	/**
-	  * Removes an item from this container
-	  * @param component A component to be removed
-	  */
 	override def -=(component: Component) = super[StackLike].-=(component)
+	
+	// When this stack is empty, it will still show itself
+	override protected def calculatedStackSize = if (isEmpty) 64.any x 64.any else super.calculatedStackSize
 }

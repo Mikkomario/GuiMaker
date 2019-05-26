@@ -82,13 +82,18 @@ trait Draggable extends ComponentLike
 		// When mouse button is pressed, starts dragging (or detaching), when drag ends, releases this component
 		override def onMouseButtonState(event: MouseButtonStateEvent) =
 		{
+			println(s"Received mouse button event: $event")
+			
 			if (event.isLeftMouseButton)
 			{
 				if (event.isDown)
 				{
+					println("Is left mouse down")
+					println("My bounds are: " + bounds)
 					// Case: Left mouse click over this component
 					if (event.isOverArea(bounds))
 					{
+						println("Starting drag")
 						relativeDragPosition = event.mousePosition - position
 						lastClickTime = Instant.now()
 						
@@ -97,7 +102,11 @@ trait Draggable extends ComponentLike
 							isDetaching = true
 						else
 							_isDragging = true
+						
+						true
 					}
+					else
+						false
 				}
 				// Case: Drag ends
 				else if (isDragging)
@@ -105,14 +114,20 @@ trait Draggable extends ComponentLike
 					// Drops the component
 					_isDragging = false
 					drop(event.mousePosition)
+					
+					true
 				}
 				// Case: Detaching ends
 				else if (isDetaching)
+				{
 					isDetaching = false
+					true
+				}
+				else
+					false
 			}
-			
-			// Will not consume the event
-			false
+			else
+				false
 		}
 		
 		// On mouse move, follows the drag or handles detaching process
