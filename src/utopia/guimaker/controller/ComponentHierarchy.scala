@@ -56,9 +56,10 @@ object ComponentHierarchy
 	/**
 	  * Finds the topmost component at the specified location
 	  * @param point Target location
+	  * @param caller The component that calls this method and will be excluded from search
 	  * @return The topmost component at the specified location. None if there isn't any component at that location
 	  */
-	def componentAtLocation(point: Point) = components.findMap { findTopComponentAt(point, _) }
+	def componentAtLocation(point: Point, caller: Component) = components.findMap { findTopComponentAt(point, _, caller) }
 	
 	/**
 	  * Registers a connection between two components
@@ -81,12 +82,12 @@ object ComponentHierarchy
 			components.map { _ - component }
 	}
 	
-	private def findTopComponentAt(point: Point, source: Tree[Component]): Option[Component] =
+	private def findTopComponentAt(point: Point, source: Tree[Component], exclude: Component): Option[Component] =
 	{
 		// If point is within component, searches the bottom component that contains the point
-		if (source.content.bounds.contains(point))
+		if (source.content != exclude && source.content.bounds.contains(point))
 		{
-			val childAtPoint = source.children.findMap { findTopComponentAt(point, _) }
+			val childAtPoint = source.children.findMap { findTopComponentAt(point, _, exclude) }
 			Some(childAtPoint getOrElse source.content)
 		}
 		else

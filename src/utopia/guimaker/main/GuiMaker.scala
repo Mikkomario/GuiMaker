@@ -51,6 +51,7 @@ object GuiMaker extends App
 	
 	val stack = new Stack()
 	stack.position = worldSize.toPoint / 2
+	ComponentHierarchy.registerFree(stack)
 	
 	handlers ++= (testLabel, stack)
 	

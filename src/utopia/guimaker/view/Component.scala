@@ -91,7 +91,7 @@ trait Component extends Draggable with Stackable with Drawable with Killable
 	override protected def drop(mousePosition: Point) =
 	{
 		// Checks whether this component should be attached to a container
-		ComponentHierarchy.componentAtLocation(mousePosition) match
+		ComponentHierarchy.componentAtLocation(mousePosition, this) match
 		{
 			case Some(container: Container) =>
 				if (!container.isFull)
