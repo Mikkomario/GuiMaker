@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ee431ec-582e-4b04-ac3e-5494f6692518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utopia/guimaker/view/MainCamera.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/Scrollable.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/shape/shape2D/Bounds.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/shape/shape2D/Bounds.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/ScrollAreaLike.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/ScrollAreaLike.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/swing/ScrollArea.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/swing/ScrollArea.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/swing/ScrollView.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/swing/ScrollView.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="../Utopia-Genesis-Scala/out/" />
@@ -21,54 +23,51 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utopia/guimaker/view/Stack.scala">
+        <entry file="file://$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/ScrollAreaLike.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+            <state relative-caret-position="440">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
-                <element signature="e#30#63#0" expanded="true" />
+                <element signature="e#43#73#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/swing/ScrollArea.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="880">
+              <caret line="53" column="4" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/utopia/guimaker/view/MainCamera.scala">
+        <entry file="file://$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/swing/ScrollView.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="876">
-              <caret line="57" column="4" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+            <state relative-caret-position="769">
+              <caret line="49" column="4" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/README.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/Scrollable.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1076">
+              <caret line="457" column="5" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="457" selection-end-column="5" />
               <folding>
-                <element signature="e#30#75#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/test/MagnifierCamera.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/handling/mutable/DrawableHandler.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/utopia/guimaker/view/Draggable.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1140">
-              <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
-              <folding>
-                <element signature="e#30#66#0" expanded="true" />
+                <element signature="e#43#73#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,16 +129,11 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../Utopia-Reflection" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../Utopia-Reflection/test/utopia/reflection/test/ScrollCanvasTest.scala" />
-        <option value="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/event/Consumable.scala" />
-        <option value="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/handling/ConsumableEventHandler.scala" />
-        <option value="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/component/ComponentLike.scala" />
-        <option value="$PROJECT_DIR$/src/utopia/guimaker/controller/EventDistributor.scala" />
         <option value="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/StackHierarchyManager.scala" />
         <option value="$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/ActionQueue.scala" />
         <option value="$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/async/AsyncExtensions.scala" />
@@ -186,8 +180,19 @@
         <option value="$PROJECT_DIR$/src/utopia/guimaker/view/Stack.scala" />
         <option value="$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/shape/shape2D/Bounds.scala" />
         <option value="$PROJECT_DIR$/src/utopia/guimaker/view/MainCamera.scala" />
+        <option value="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/Scrollable.scala" />
+        <option value="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/ScrollAreaLike.scala" />
+        <option value="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/swing/ScrollArea.scala" />
+        <option value="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/ScrollViewLike.scala" />
+        <option value="$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/swing/ScrollView.scala" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
@@ -254,21 +259,6 @@
               <item name="Utopia-Genesis-Scala" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="genesis" type="462c0819:PsiDirectoryNode" />
-              <item name="shape" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Genesis-Scala" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="genesis" type="462c0819:PsiDirectoryNode" />
-              <item name="shape" type="462c0819:PsiDirectoryNode" />
-              <item name="shape2D" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Utopia-Genesis-Scala" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="genesis" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -301,6 +291,36 @@
               <item name="handling" type="462c0819:PsiDirectoryNode" />
               <item name="mutable" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Utopia-Reflection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Utopia-Reflection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Utopia-Reflection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reflection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Utopia-Reflection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reflection" type="462c0819:PsiDirectoryNode" />
+              <item name="container" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GuiMaker" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Utopia-Reflection" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="reflection" type="462c0819:PsiDirectoryNode" />
+              <item name="container" type="462c0819:PsiDirectoryNode" />
+              <item name="stack" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -323,6 +343,9 @@
       <recent name="utopia.flow.event" />
       <recent name="utopia.reflection.shape" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="utopia.reflection.container.stack" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Mikko\IdeaProjects\GuiMaker\.idea" />
     </key>
@@ -339,7 +362,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GuiMaker">
+  <component name="RunManager" selected="Application.ScrollAreaTest">
     <configuration name="ActionQueueTest" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="utopia.flow.test.ActionQueueTest" />
       <module name="Utopia-Flow-Scala" />
@@ -392,8 +415,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScrollCanvasTest" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="utopia.reflection.test.ScrollCanvasTest" />
+    <configuration name="ScrollAreaTest" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="utopia.reflection.test.ScrollAreaTest" />
       <module name="Utopia-Reflection" />
       <extension name="coverage">
         <pattern>
@@ -407,11 +430,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ScrollAreaTest" />
         <item itemvalue="Application.GuiMaker" />
         <item itemvalue="Application.MouseTest" />
         <item itemvalue="Application.LocalizationTest" />
         <item itemvalue="Application.ActionQueueTest" />
-        <item itemvalue="Application.ScrollCanvasTest" />
       </list>
     </recent_temporary>
   </component>
@@ -507,14 +530,21 @@
       <option name="project" value="LOCAL" />
       <updated>1558982954517</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Genesis: New constructor in Bounds&#10;GuiMaker: Working on a new, alternative main view">
+      <created>1559232782522</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1559232782522</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2575" height="1415" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20381406" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20540325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -532,12 +562,12 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.22352025" />
+      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.22352025" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.32975766" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -556,39 +586,10 @@
     <MESSAGE value="Flow: Added changing trait&#10;GuiMaker: Working on margins" />
     <MESSAGE value="Reflection: Added insert method to stackLike (not tested)&#10;GuiMaker: Still working on stack" />
     <MESSAGE value="Genesis: Built a workaround around swing related repaint bug&#10;GuiMaker: Fixed a bug in stack setup + drop()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Genesis: Built a workaround around swing related repaint bug&#10;GuiMaker: Fixed a bug in stack setup + drop()" />
+    <MESSAGE value="Genesis: New constructor in Bounds&#10;GuiMaker: Working on a new, alternative main view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Genesis: New constructor in Bounds&#10;GuiMaker: Working on a new, alternative main view" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/shape/LengthExtensions.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/shape/StackLength.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1199">
-          <caret line="82" column="6" selection-start-line="82" selection-start-column="6" selection-end-line="82" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/event/ChangeEvent.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/event/ChangeListener.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="99" selection-start-line="14" selection-start-column="99" selection-end-line="14" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/datastructure/mutable/MutatingWithEvents.scala" />
-    <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/event/MutableWithEvents.scala" />
     <entry file="file://$PROJECT_DIR$/../Utopia-Flow-Scala/src/utopia/flow/datastructure/mutable/PointerLike.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -849,6 +850,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/view/Canvas.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="42" column="4" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/view/CanvasMouseEventGenerator.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/test/CameraTest.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/shape/shape2D/Bounds.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="959">
+          <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/handling/Camera.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utopia/guimaker/view/Stack.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+          <folding>
+            <element signature="e#30#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utopia/guimaker/view/MainCamera.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="e#30#75#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/test/MagnifierCamera.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/handling/mutable/DrawableHandler.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/utopia/guimaker/main/GuiMaker.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="740">
@@ -880,72 +950,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/view/Canvas.scala">
+    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/README.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="42" column="4" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
+        <state relative-caret-position="680">
+          <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/handling/Camera.scala">
+    <entry file="file://$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/Scrollable.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/view/CanvasMouseEventGenerator.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utopia/guimaker/view/Stack.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+        <state relative-caret-position="1076">
+          <caret line="457" column="5" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="457" selection-end-column="5" />
           <folding>
-            <element signature="e#30#63#0" expanded="true" />
+            <element signature="e#43#73#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/handling/mutable/DrawableHandler.scala">
+    <entry file="file://$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/ScrollAreaLike.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#43#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/swing/ScrollArea.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="53" column="4" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/stack/ScrollViewLike.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/test/CameraTest.scala">
+    <entry file="file://$PROJECT_DIR$/../Utopia-Reflection/src/utopia/reflection/container/swing/ScrollView.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/test/MagnifierCamera.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Utopia-Genesis-Scala/src/utopia/genesis/shape/shape2D/Bounds.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="959">
-          <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utopia/guimaker/view/MainCamera.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="876">
-          <caret line="57" column="4" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
-          <folding>
-            <element signature="e#30#75#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="769">
+          <caret line="49" column="4" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="4" />
         </state>
       </provider>
     </entry>
